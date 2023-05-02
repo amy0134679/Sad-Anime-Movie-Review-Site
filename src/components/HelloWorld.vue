@@ -35,7 +35,19 @@
         <p>"{{movieInfo.tagline}}"</p>
       </div>
     </div>
-  </div>
+    <div id="movieInfo">
+        <h3 id="movieYear"></h3>
+        <h3 id="ogTitle"></h3>
+        <p id="ogCountry"></p>
+        <p id="ogLang"></p>
+        <p id="runtime"></p>
+        <p id="status"></p>
+        <p id="rating"></p>
+        <p id="movieOverview"></p>
+      </div>
+    </div>
+
+  <!-- </div> -->
 </template>
 
 <script>
@@ -71,7 +83,133 @@ export default {
 <style scoped>
 .body {
   margin: 20px;
-  background-color: aqua;
+
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+body {
+  margin: 20px;
+  background-image: url("https://images8.alphacoders.com/749/749455.png");
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header h1 {
+  border-radius: 15px;
+  background-color: #4d4c7d;
+  text-shadow: 5px 5px #827397;
+  filter: drop-shadow(-10px 10px 20px #827397);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 50px;
+  font-weight: bold;
+  line-height: 1 rem;
+  text-align: left;
+  color: #d8b9c3;
+  text-align: left;
+  padding: 2rem;
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+label {
+  color: #d8b9c3;
+  margin-right: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button {
+  margin-left: auto;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d8b9c3;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  filter: drop-shadow(-10px 10px 20px #827397);
+}
+button:hover {
+  background-color: #dba4b5;
+  color: white;
+  filter: drop-shadow(-10px 10px 10px #827397);
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  margin: 20px;
+}
+
+.basicInfo {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(252, 210, 235, 0.25);
+}
+
+#moviePoster {
+  width: 40%;
+  max-width: 400px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#movieTrailer {
+  width: 50%;
+  height: 500px;
+  padding: 3rem;
+  border: none;
+  border-radius: 5px;
+}
+
+#movieInfo {
+  color: white;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(252, 210, 235, 0.25);
+}
+
+#movieYear {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+#ogTitle {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#moviePicker {
+  border-radius: 15px;
+  border-color: rgba(0, 0, 0, 0);
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: #4d4c7d;
+  color: #d8b9c3;
+  filter: drop-shadow(-10px 10px 20px #827397);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+option:hover{
+  filter: drop-shadow(-10px 10px 10px #827397);
+  background-color: black;
+}
+
 </style>
