@@ -23,19 +23,23 @@
     <button @click="getInfo">GET</button>
 
     <div v-if="movieInfo" class="info-container">
-      
+      <h1>{{ movieInfo.title }}</h1> 
       <img :src= "`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`" alt="">
+      <iframe :src= "`https://www.youtube.com/embed/${movieInfo.videos.results.filter((trailer) => trailer.type === 'Trailer').at(0).key}`" frameborder="0"></iframe>
+<!-- 
       <div class="info">
+        
+        <p>{{ movieInfo.title }}</p> 
         <h1>{{ movieInfo.title }}</h1> 
-        <p>Release Date: {{movieInfo.release_date}} | Popularity: {{movieInfo.popularity}} | Runtime: {{movieInfo.runtime}} | Genre: {{movieInfo.genres.map((genre) => { return genre.name} )}}</p>
-        <p>Vote Average: {{movieInfo.vote_average}} | Vote Count: {{movieInfo.vote_count}}</p>
+        <h1>{{ movieInfo.title }}</h1> 
+        <p>Release Date: {{movieInfo.release_date}} | Original Language: {{movie.original_language}} | Runtime: {{movieInfo.runtime}} | Movie status: {{movieInfo.movie.status}}</p>
+        <p> {{movieInfo.original_title}} | Rating: {{movieInfo.vote_average}}</p>
         <h2>Overview:</h2>
         <p> {{ movieInfo.overview }}</p>
-        <iframe :src= "`https://www.youtube.com/embed/${movieInfo.videos.results.filter((trailer) => trailer.type === 'Trailer').at(0).key}`" frameborder="0"></iframe>
         <p>"{{movieInfo.tagline}}"</p>
-      </div>
+      </div> -->
     </div>
-    <div id="movieInfo">
+    <!-- <div id="movieInfo">
         <h3 id="movieYear"></h3>
         <h3 id="ogTitle"></h3>
         <p id="ogCountry"></p>
@@ -44,10 +48,9 @@
         <p id="status"></p>
         <p id="rating"></p>
         <p id="movieOverview"></p>
-      </div>
+      </div> -->
     </div>
 
-  <!-- </div> -->
 </template>
 
 <script>
