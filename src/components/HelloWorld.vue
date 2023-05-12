@@ -21,7 +21,7 @@
       <option value="198375">The Garden of Words</option>
       <option value="504253">I Want to Eat Your Pancreas</option>
       <option value="92321">Into the Forest of Firefly Light</option>
-      <option value="4935">Howl's Moving Castle</option>
+      <option value="4935">Howl's Moving astle</option>
       <option value="568160">Weathering With You</option>
     </select>
     <button @click="getInfo">GET</button>
@@ -34,11 +34,12 @@
 
     <div v-if="movieInfo" class="grid-container detailInfo"> 
       <h3>{{ movieInfo.origin_country }}</h3> 
+      <h3>{{ movieInfo.release_date }}</h3> 
       <h3>{{ movieInfo.original_title }}</h3> 
-      <p>{{ movieInfo.original_language }}</p> 
-      <p>{{ movieInfo.runtime }}</p> 
-      <p>{{ movieInfo.status }}</p> 
-      <p>{{ movieInfo.vote_average }}</p> 
+      <p>Original Language:{{ movieInfo.original_language }}</p> 
+      <p>Runtime:{{ movieInfo.runtime }}</p> 
+      <p>Status:{{ movieInfo.status }}</p> 
+      <p>Rating:{{ movieInfo.vote_average }}</p> 
 
     </div>
     </div>
@@ -78,10 +79,18 @@ export default {
 
 <style scoped>
 
-.body {
-  margin: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+* {
+  padding: 0;
+  margin: 0;
 }
+
+body {
+  background-size: 100vw;
+  margin-bottom: 8%;
+  /* background-image: url('./assets/images/handsome.jpg'); */
+  width: 100vw;
+}
+
 #background {
     position: absolute;
     z-index: -1;
