@@ -12,7 +12,7 @@
     </div>
 
     <label for="moviePicker">Select a Movie!:</label>
-    <select v-model="moviePicker">
+    <select v-model="movie-picker">
       <option value="378064">A Silent Voice</option>
       <option value="12477">Grave of Fireflies</option>
       <option value="530079">Ride Your Wave</option>
@@ -28,11 +28,11 @@
 
     <div v-if="movieInfo" class="grid-container basicInfo">
       <h2>{{ movieInfo.title }}</h2> 
-      <img :src= "`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`" alt="">
-      <iframe :src= "`https://www.youtube.com/embed/${movieInfo.videos.results.filter((trailer) => trailer.type === 'Trailer').at(0).key}`" frameborder="0"></iframe>
+      <img :src= "`https://image.tmdb.org/t/p/w500${movie-info.poster_path}`" alt="">
+      <iframe :src= "`https://www.youtube.com/embed/${movie-info.videos.results.filter((trailer) => trailer.type === 'Trailer').at(0).key}`" frameborder="0"></iframe>
     </div>
 
-    <div v-if="movieInfo" class="grid-container detailInfo"> 
+    <div v-if="movie-info" class="grid-container detailInfo"> 
       <h3>{{ movieInfo.origin_country }}</h3> 
       <h3>{{ movieInfo.release_date }}</h3> 
       <h3>{{ movieInfo.original_title }}</h3> 
@@ -123,7 +123,7 @@ label {
   font-weight: bold;
 }
 
-.moviePicker {
+.movie-picker {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,7 +158,7 @@ button:hover {
 
 }
 
-.basicInfo {
+.basic-info {
   font-size: 30px;
   text-align: center;
   color: white;
@@ -168,7 +168,7 @@ button:hover {
   background-color: rgba(252, 210, 235, 0.25);
 }
 
-#moviePoster {
+#movie-poster {
   width: 40%;
   max-width: 400px;
   margin-right: 20px;
@@ -176,7 +176,7 @@ button:hover {
   border-radius: 5px;
 }
 
-#movieTrailer {
+#movie-trailer {
   width: 50%;
   height: 500px;
   padding: 3rem;
@@ -184,7 +184,7 @@ button:hover {
   border-radius: 5px;
 }
 
-.basicInfo {
+.basic-info {
   color: white;
   justify-content: center;
   padding: 20px;
@@ -193,12 +193,12 @@ button:hover {
   background-color: rgba(252, 210, 235, 0.25);
 }
 
-.movieDetails{
+.movie-details{
  margin-top: 0;
 font-size: 1.5rem; 
 }
 
-#moviePicker {
+#movie-picker {
   border-radius: 15px;
   border-color: rgba(0, 0, 0, 0);
   padding: 1rem;
