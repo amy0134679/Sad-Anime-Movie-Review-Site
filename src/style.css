@@ -1,0 +1,5 @@
+body {
+    background-size: 100vw;
+    margin-bottom: 8%;
+    background-image: url(`./assets/tmdb bg.png`);
+}
