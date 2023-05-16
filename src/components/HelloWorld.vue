@@ -112,7 +112,7 @@ color: white;
 filter: drop-shadow(-10px 10px 10px #827397);
 }
 
-.grid-container {
+.grid-container basic-info{
 display: grid;
 grid-gap: 20px;
 margin: 20px;
