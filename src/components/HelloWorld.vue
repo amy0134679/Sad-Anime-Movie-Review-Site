@@ -12,7 +12,7 @@
     </div>
 
     <label for="movie-picker">Select a Movie!:</label>
-    <select v-model="moviePicker">
+    <select id="selector-box" v-model="moviePicker">
       <option value="378064">A Silent Voice</option>
       <option value="12477">Grave of Fireflies</option>
       <option value="530079">Ride Your Wave</option>
@@ -28,8 +28,8 @@
 
     <div v-if="movieInfo" class="grid-container basic-info">
       <h2>{{ movieInfo.title }}</h2> 
-      <img :src="`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`" alt="">
-      <iframe :src="`https://www.youtube.com/embed/${movieInfo.videos.results.filter((trailer) => trailer.type === 'Trailer').at(0).key}`" frameborder="0"></iframe>
+      <img id="poster" :src="`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`" alt="">
+      <iframe id="trailer" :src="`https://www.youtube.com/embed/${movieInfo.videos.results.filter((trailer) => trailer.type === 'Trailer').at(0).key}`" frameborder="0"></iframe>
     </div>
 
     <div v-if="movieInfo" class="grid-container detail-info"> 
@@ -46,8 +46,8 @@
 
 <style scoped>
 body {
+  
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 #background {
   position: fixed;
@@ -66,24 +66,25 @@ header h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 50px;
   font-weight: bold;
-  line-height: 1 rem;
+  line-height:  rem;
   text-align: left;
   color: #d8b9c3;
   text-align: left;
   padding: 2rem;
-  margin: 0;
+  margin: 1;
   font-size: 2rem;
   letter-spacing: 1px;
 }
 
 label {
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #d8b9c3;
-  margin-right: 10px;
   font-size: 2rem;
   font-weight: bold;
 }
 
-.movie-picker {
+.select {
 display: flex;
 align-items: center;
 justify-content: center;
@@ -94,6 +95,7 @@ border-radius: 5px;
 }
 
 button {
+  float: right;
 margin-left: auto;
 padding: 8px 15px;
 border: none;
@@ -118,7 +120,7 @@ background-color: rgba(252, 210, 235, 0.25);
 }
 
 .basic-info {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 30px;
 text-align: center;
 color: white;
@@ -128,7 +130,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 background-color: rgba(252, 210, 235, 0.25);
 }
 
-.img {
+#poster {
   width: 40%;
   max-width: 400px;
   margin-right: 20px;
@@ -136,16 +138,17 @@ background-color: rgba(252, 210, 235, 0.25);
   border-radius: 5px;
 }
 
-.iframe {
-width: 60%;
-height: 5000px;
-padding: 3rem;
-border: none;
-border-radius: 5px;
+#trailer {
+  /* float: right; */
+  width: 50%;
+  height: 500px;
+  padding: 3rem;
+  border: none;
+  border-radius: 5px;
 }
 
 .detail-info {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 color: white;
 justify-content: left;
 padding: 20px;
@@ -154,14 +157,11 @@ background-color: rgba(252, 210, 235, 0.25);
 }
 
 .movie-details {
-  margin-top: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-margin-top: 0;
 font-size: 1.5rem;
 }
 
-#movie-picker {
+#selector-box {
 border-radius: 15px;
 border-color: rgba(0, 0, 0, 0);
 padding: 1rem;
