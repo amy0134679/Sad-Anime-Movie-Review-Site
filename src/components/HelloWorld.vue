@@ -45,14 +45,18 @@
 </template>
 
 <style scoped>
-* {
-  padding: 0;
-  margin: 0;
-  background-image: url('https://wall.alphacoders.com/big.php?i=749455');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+}
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
 
 header h1 {
   border-radius: 15px;
@@ -80,7 +84,6 @@ label {
 }
 
 .movie-picker {
- 
 display: flex;
 align-items: center;
 justify-content: center;
@@ -115,6 +118,7 @@ background-color: rgba(252, 210, 235, 0.25);
 }
 
 .basic-info {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 30px;
 text-align: center;
 color: white;
@@ -125,30 +129,34 @@ background-color: rgba(252, 210, 235, 0.25);
 }
 
 .img {
-width: 40px;
-margin-right: 20px;
-margin-bottom: 10px;
-border-radius: 5px;
+  width: 40%;
+  max-width: 400px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-#movie-trailer {
-width: 50%;
-height: 500px;
+.iframe {
+width: 60%;
+height: 5000px;
 padding: 3rem;
 border: none;
 border-radius: 5px;
 }
 
-.basic-info {
+.detail-info {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 color: white;
-justify-content: center;
+justify-content: left;
 padding: 20px;
-border-radius: 5px;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 background-color: rgba(252, 210, 235, 0.25);
 }
 
 .movie-details {
+  margin-top: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 margin-top: 0;
 font-size: 1.5rem;
 }
