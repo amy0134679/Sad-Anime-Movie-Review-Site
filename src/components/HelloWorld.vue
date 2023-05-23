@@ -25,7 +25,7 @@
       <option value="198375">The Garden of Words</option>
       <option value="504253">I Want to Eat Your Pancreas</option>
       <option value="92321">Into the Forest of Firefly Light</option>
-      <option value="4935">Howl's Moving astle</option>
+      <option value="4935">Howl's Moving Castle</option>
       <option value="568160">Weathering With You</option>
     </select>
     <button @click="getInfo">GET</button>
@@ -102,22 +102,11 @@ label {
   font-weight: bold;
 }
 
-.select {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  padding: 8px;
-  font-size: 1rem;
-  border-radius: 5px;
-}
-
 button {
   float: right;
   margin-left: auto;
   padding: 8px 15px;
   margin-right: 10px;
-  border: none;
   border-radius: 5px;
   background-color: #d8b9c3;
   color: white;
@@ -187,11 +176,6 @@ button:hover {
   color: #d8b9c3;
   filter: drop-shadow(-10px 10px 20px #827397);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-option:hover {
-  filter: drop-shadow(-10px 10px 10px #827397);
-  background-color: black;
 }
 </style>
 
